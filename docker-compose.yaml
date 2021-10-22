@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  workshop20211022-php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: workshop20211022-php
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "1022:80"
+    networks:
+      - workshop20211022-network
+
+networks:
+  workshop20211022-network:
