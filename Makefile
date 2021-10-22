@@ -15,6 +15,6 @@ test:
 	@docker exec workshop20211022-php ./vendor/bin/behat --format=progress -v
 
 .PHONY: deps
-deps:
+deps:start
 	@docker exec workshop20211022-php composer require --dev behat/behat
 	@docker exec workshop20211022-php composer require --dev phpunit/phpunit
